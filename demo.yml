@@ -1,0 +1,16 @@
+---
+  - name: Clone Image repository from Github
+    hosts: target_host
+    become: yes
+
+    vars:
+      github_repo_url: "https://github.com/harshbinfopercept/demo.git"
+      destination_path: "C:/Users/harshb/Desktop"
+
+    tasks:
+      - name: Clone repository
+        git:
+          repo: "{{ https://github.com/harshbinfopercept/demo.git }}"
+          dest: "{{ C:/Users/harshb/Desktop }}"
+          version: master
+...
